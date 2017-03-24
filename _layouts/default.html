@@ -5,31 +5,59 @@
 </head>
 <body>
 
-  <div class="site">
-    <div class="header">
-      <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-      <a class="extra" href="/">Home</a>
+  <div class="frame">
+    <div class="top-bar">
+      <a href="dashboard.html" class="nav-brand">myNEU</a>
+      <input type="text" name="" placeholder="Search">
+      <div class="icons">
+        <i class="material-icons">notifications</i>
+        <i class="material-icons">email</i>
+      </div>
+      <div class="dropdown">
+        <img class="avatar" src="http://nuwit.ccs.neu.edu/img/officers/brittany2.jpg" alt="">
+        <div class="Name">Brittany Chiang</div>
+        <i class="material-icons">expand_more</i>
+      </div>
     </div>
+    <div class="side-bar">
 
-    {% include nav.html %}
-
+      <div class="link-container">
+        <div class="highlight {% if page.title == "Dashboard" %}active{% endif %}"></div>
+        <div class="link">
+          <i class="material-icons">dashboard</i>
+          <div class="caption">Dashboard</div>
+        </div>
+      </div>
+      <div class="link-container">
+        <div class="highlight {% if page.title == "Academics" %}active{% endif %}"></div>
+        <div class="link">
+          <i class="material-icons">school</i>
+          <div class="caption">Academics</div>
+        </div>
+      </div>
+      <div class="link-container">
+        <div class="highlight {% if page.title == "Resources" %}active{% endif %}"></div>
+        <div class="link">
+          <i class="material-icons">dashboard</i>
+          <div class="caption">Resources</div>
+        </div>
+      </div>
+      <div class="link-container">
+        <div class="highlight {% if page.title == "Career Services" %}active{% endif %}"></div>
+        <div class="link">
+          <i class="material-icons">business_center</i>
+          <div class="caption">Career Services</div>
+        </div>
+      </div>
+      <div class="link-container">
+        <div class="highlight {% if page.title == "Finances" %}active{% endif %}"></div>
+        <div class="link">
+          <i class="material-icons">monetization_on</i>
+          <div class="caption">Finances</div>
+        </div>
+      </div>
+    </div>
     {{ content }}
-
-    <div class="footer">
-      <div class="contact">
-        <p>
-          Your Name is<br />
-          What You Are<br />
-          you@example.com
-        </p>
-      </div>
-      <div class="contact">
-        <p>
-          <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-          <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-        </p>
-      </div>
-    </div>
   </div>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

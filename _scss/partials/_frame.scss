@@ -1,0 +1,99 @@
+.frame {
+  transition: all 0.3s ease;
+  .top-bar {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    & > * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .nav-brand {
+      display: block;
+      position: absolute;
+      background: #615445;
+      color: #fff;
+      width: 150px;
+      height: 70px;
+      font-size: 30px;
+      font-weight: 500;
+      text-align: center;
+      padding: 15px 0;
+    }
+    input {
+      position: absolute;
+      width: 200px;
+      top: 17px;
+      right: 340px;
+      height: 35px;
+    }
+    .icons {
+      position: absolute;
+      height: 70px;
+      right: 220px;
+      padding: 22px;
+      .material-icons {
+        margin: 0 5px;
+      }
+    }
+    .dropdown {
+      position: absolute;
+      height: 70px;
+      right: 0;
+      padding: 15px;
+      & > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .avatar {
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+    }
+
+  }
+  .side-bar {
+    position: absolute;
+    width: 150px;
+    height: calc(100% - 70px);
+    top: 70px;
+    background: #393132;
+    color: #fff;
+    .link-container {
+      position: relative;
+      transition: all 0.3s ease;
+      &:hover {
+        cursor: pointer;
+        background: rgb(76, 66, 68);
+        .highlight {
+          opacity: 1;
+        }
+      }
+      .highlight {
+        position: absolute;
+        background: #CC0000;
+        width: 7px;
+        height: 100%;
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+      .highlight.active {
+        opacity: 1;
+      }
+      .link {
+        width: 150px;
+        height: 110px;
+        text-align: center;
+        padding: 25px;
+        font-size: 12px;
+        .material-icons {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}

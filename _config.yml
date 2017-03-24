@@ -1,9 +1,10 @@
 # Site settings
-name: Patrick Star
-title: Patrick Star's Site
-description: Wumbo
-url: http://google.com
+name: MyNEU
+title: Redesign myNEU
+description:
+url: http://brittanychiang.com
 baseurl: ""
+logo: img/n-logo.png
 email:
 social:
   - title: email
