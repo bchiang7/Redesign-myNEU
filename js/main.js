@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){console.log("hi")});
+$(document).ready(function(){$(".top-bar .dropdown").on("click",function(){console.log("here"),$(".dropdown-options").toggleClass("active")})});

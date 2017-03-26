@@ -1,0 +1,82 @@
+#academics {
+  .schedule {
+    width: calc(100% - 20px);
+    height: 300px;
+    table {
+      tr {
+        td {
+          &.subject, &.prof {
+            font-weight: 500;
+          }
+          &.days {
+            span {
+              display: inline-block;
+              margin: 0;
+              border-radius: 100%;
+              width: 25px;
+              height: 25px;
+              font-weight: 500;
+              text-align: center;
+              padding-top: 1px;
+            }
+            .highlight {
+              background: #7f8fa4;
+              color: #fff;
+            }
+          }
+          .grade {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            background: #ccc;
+            border-radius: 100%;
+            color: #fff;
+            &.a {
+              background: #7ED321;
+            }
+            &.b {
+              background: #F6A623;
+            }
+          }
+          .per {
+            margin-left: 35px;
+          }
+        }
+      }
+    }
+  }
+
+
+  .degree, .registration, .forms {
+    height: 440px;
+    table {
+      table-layout:fixed;
+      margin-bottom: 20px;
+      tr {
+        border: none;
+        height: 30px;
+        td {
+          padding: 0;
+          overflow: hidden;
+          &.field {
+            font-weight: 500;
+            width: 120px;
+          }
+        }
+      }
+    }
+  }
+  .degree, .registration {
+    table {
+      table-layout: auto;
+      tr {
+        td {
+          &.field {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}

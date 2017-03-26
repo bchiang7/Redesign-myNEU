@@ -1,3 +1,94 @@
 #dashboard {
+  .welcome {
+    width: calc(100% - 20px);
+    height: 160px;
+    .info {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      .col {
+        display: inline-block;
+        justify-content: space-between;
+      }
+      .avatar {
+        width: 70px;
+        border-radius: 100%;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .container {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+  .courses {
+    width: 64%;
+    display: inline-block;
+    height: 270px;
+    table {
+      tr {
+        td {
+          &.subject, &.prof {
+            font-weight: 500;
+          }
+          .grade {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            background: #ccc;
+            border-radius: 100%;
+            color: #fff;
+            &.a {
+              background: #7ED321;
+            }
+            &.b {
+              background: #F6A623;
+            }
+          }
+          .per {
+            margin-left: 35px;
+          }
+        }
+      }
+    }
+  }
+  .finances {
+    width: 33%;
+    display: inline-block;
+    height: 270px;
+    table {
+      tr {
+        td {
+          &.bad {
+            color: #EB122C;
+          }
+          &.good {
+            color: #509800;
+          }
+        }
+      }
+    }
+  }
+  .news {
+    width: calc(100% - 20px);
+    height: 250px;
+    .article-container {
+      width: 100%;
+      .article {
+        display: inline-block;
+        width: 20%;
+        margin-right: 10px;
+        font-size: 14px;
+        line-height: 18px;
+        .thumbnail {
+          width: 85%;
+        }
+        .caption {
 
+        }
+      }
+    }
+  }
 }

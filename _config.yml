@@ -1,10 +1,14 @@
 # Site settings
 name: MyNEU
+username: Brittany
+fullname: Brittany Chiang
+nuid: 001937003
 title: Redesign myNEU
 description:
 url: http://brittanychiang.com
 baseurl: ""
 logo: img/n-logo.png
+avatar: http://nuwit.ccs.neu.edu/img/officers/brittany2.jpg
 email:
 social:
   - title: email

@@ -1,4 +1,7 @@
 // The code in here will run on every page.
 $( document ).ready( function() {
-  console.log('hi');
+  // on click: if dropdown doesn't have class of active, show options
+  $('.top-bar .dropdown').on( "click", function() {
+    $('.dropdown-options').toggleClass('active');
+  });
 });

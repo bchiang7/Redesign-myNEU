@@ -11,7 +11,7 @@ module.exports = gulp => {
     .pipe( eslint( {
         useEslintrc: true
       } ) )
-    .pipe( eslint.format() )
+    // .pipe( eslint.format() )
     .pipe( uglify() )
     .pipe( gulp.dest( destPath ) )
     .pipe( gulp.dest( 'js' ) );
