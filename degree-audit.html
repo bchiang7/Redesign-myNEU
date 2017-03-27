@@ -1,0 +1,72 @@
+---
+layout: default
+title: Degree Audit
+permalink: /degree-audit/
+---
+
+<div id="degree-audit" class="content">
+  <div class="panel degree-info">
+    <div class="header">Degree Audit <span class="subheader">001937003</span><i class="material-icons">keyboard_arrow_down</i></div>
+    <div class="info">
+      <div class="col">
+        <div class="major"><strong>Level: </strong>Undergraduate</div>
+        <div class="minor"><strong>Co-op Cycle: </strong>Fall (5 years, 3 co-ops)</div>
+        <div class="track"><strong>Program: </strong>B.S. Information Science</div>
+      </div>
+      <div class="col">
+        <div class="major"><strong>Major: </strong>Information Science</div>
+        <div class="track"><strong>Concentration: </strong>Human Computer Interaction</div>
+        <div class="minor"><strong>Minor: </strong>Interaction Design</div>
+      </div>
+      <div class="col">
+        <div class="major"><strong>Admit Term: </strong>Fall 2013</div>
+        <div class="minor"><strong>Admit Type: </strong>UG Early Action</div>
+        <div class="minor"><strong>Catalog Term: </strong>Fall 2013</div>
+        <div class="track"><strong>Grad Term: </strong>Spring 2018</div>
+      </div>
+    </div>
+  </div>
+  <div class="panel audit">
+    <i class="material-icons print">print</i>
+    <ul class="accordion">
+      {% for group in site.data.audit %}
+      <li>
+        <a>
+          {% if group.status == "good" %}
+          <div class="status green"><i class="material-icons">done</i></div>
+          {% else %}
+          <div class="status red"><i class="material-icons">clear</i></div>
+          {% endif %}
+          <div class="title">
+            <span class="dept">{{ group.dept }}</span>
+            <span class="curriculum">{{ group.group }}</span>
+          </div>
+        </a>
+        <div class="detail-container">
+          <div class="line"></div>
+          <ul class="details">
+            {% for course in group.courses %}
+            <li>
+              {% if course.complete == true %}
+              <div class="status green"><i class="material-icons">done</i></div>
+              {% else %}
+              <div class="status red"><i class="material-icons">clear</i></div>
+              {% endif %}
+              <span class="semester">{{ course.semester }}</span>
+              <span class="code">{{ course.code }}</span>
+              <span class="course">{{ course.course }}</span>
+              <span class="grade">Grade: {{ course.grade }}</span>
+              <span class="credits">Credits: {{ course.credits }}</span>
+            </li>
+            {% endfor %}
+<!--             <li>
+              <div class="status red"><i class="material-icons">clear</i></div>
+              <span><strong>CS or IS Elective</strong> (Complete 1 Elective: CS 2500+ or IS 2000+ or DS 2000+)</span>
+            </li> -->
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

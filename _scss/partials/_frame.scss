@@ -23,12 +23,23 @@
       text-align: center;
       padding: 20px 0;
     }
-    input {
+    .search {
       position: absolute;
-      width: 200px;
       top: 17px;
       right: 340px;
-      height: 35px;
+      .material-icons {
+        position: absolute;
+        z-index: 5;
+        top: 5px;
+        left: 7px;
+        color: #ccc;
+      }
+      input {
+        position: relative;
+        width: 200px;
+        height: 35px;
+        padding-left: 35px;
+      }
     }
     .icons {
       position: absolute;

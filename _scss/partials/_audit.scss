@@ -1,0 +1,139 @@
+#degree-audit {
+  .degree-info {
+    width: calc(100% - 20px);
+    height: 185px;
+
+    .header {
+      .material-icons {
+        float: right;
+        position: relative;
+        top: -10px;
+        font-size: 30px;
+        color: #7F8FA4;
+      }
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      .col {
+
+      }
+    }
+  }
+  .audit {
+    width: calc(100% - 20px);
+    min-height: 500px;
+    height: auto;
+    .print {
+      float: right;
+    }
+    .accordion {
+      // box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+      max-width: 1000px;
+      margin: 40px auto 100px;
+      border: 1px solid #DFE3E9;
+      border-radius: 4px;
+      li {
+        border-bottom: 1px solid #DFE3E9;
+        position: relative;
+        &:last-of-type {
+          border-bottom: none;
+        }
+        a {
+          width: 100%;
+          display: block;
+          cursor: pointer;
+          padding: 15px 20px;
+          font-weight: 500;
+          &:after {
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid #7F8FA4;
+            border-bottom: 2px solid #7F8FA4;
+            position: absolute;
+            right: 25px;
+            content: " ";
+            top: 30px;
+            transform: rotate(45deg);
+            transition: all .2s ease-in-out;
+          }
+          &.active {
+            box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
+            &:after {
+              top: 35px;
+              transform: rotate(225deg);
+              transition: all 0.2s ease-in-out;
+            }
+          }
+          span {
+            display: block;
+          }
+          .status, .title {
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .status {
+            margin-right: 10px;
+          }
+          .title {
+            .dept {
+              color: #7F8FA4;
+            }
+          }
+        }
+        .detail-container {
+          display: none;
+          margin: 0;
+          background: #F1F1F1;
+          position: relative;
+
+          .line {
+            background: #C5C5C5;
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            left: 65px;
+          }
+
+          .details {
+            margin-left: 33px;
+            padding: 5px 20px;
+            li {
+              border: none;
+              margin: 20px 0;
+              .status {
+                width: 25px;
+                height: 25px;
+                margin-right: 20px;
+                vertical-align: middle;
+                .material-icons {
+                  font-size: 20px;
+                }
+              }
+              span {
+                display: inline-block;
+              }
+              .semester {
+                width: 70px;
+                color: #7F8FA4;
+              }
+              .code {
+                width: 100px;
+                font-weight: 500;
+              }
+              .course {
+                width: 250px;
+                font-weight: 500;
+              }
+              .grade, .credits {
+                width: 100px;
+                color: #7F8FA4;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+- group: Common Computer Science and Information Science Curriculum
+  dept: CCIS
+  status: good
+  courses:
+    - complete: true
+      semester: SP '15
+      code: PSYC 3466
+      course: Cognition
+      grade: A
+      credits: 4.00
+    - complete: true
+      semester: SP '15
+      code: PSYC 3466
+      course: Cognition
+      grade: A
+      credits: 4.00
+    - complete: true
+      semester: SP '15
+      code: PSYC 3466
+      course: Cognition
+      grade: A
+      credits: 4.00
+
+- group: Common Information Science Curriculum
+  dept: CCIS
+  status: good
+  courses:
+    - complete: true
+      semester: SP '15
+      code: PSYC 3466
+      course: Cognition
+      grade: A
+      credits: 4.00
+    - complete: true
+      semester: SP '15
+      code: PSYC 3466
+      course: Cognition
+      grade: A
+      credits: 4.00
+    - complete: true
+      semester: SP '15
+      code: PSYC 3466
+      course: Cognition
+      grade: A
+      credits: 4.00
+
+- group: Human Computer Interaction Concentration and Electives
+  dept: CCIS
+  status: bad
+  courses:
+    - complete: true
+      semester: SP '15
+      code: PSYC 3466
+      course: Cognition
+      grade: A
+      credits: 4.00
+    - complete: true
+      semester: SP '16
+      code: CS 4550
+      course: Web Development
+      grade: A
+      credits: 4.00
+    - complete: true
+      semester: SP '17
+      code: DS 4200
+      course: Information Visualization
+      grade: A
+      credits: 4.00
+    - complete: false
+      semester: N/A
+      code: CS 4500
+      course: Software Development
+      grade: N/A
+      credits: 4.00
+
+- group: Computer Science English Requirement
+  dept: CCIS
+  status: bad
+  courses:
+    - complete: true
+      semester: SP '15
+      code: PSYC 3466
+      course: Cognition
+      grade: A
+      credits: 4.00
+
+- group: Required General Electives
+  dept: NU
+  status: bad
+  courses:
+    - complete: true
+      semester: SP '15
+      code: PSYC 3466
+      course: Cognition
+      grade: A
+      credits: 4.00

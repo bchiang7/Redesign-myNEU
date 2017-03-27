@@ -6,6 +6,8 @@
 @import "partials/resources";
 @import "partials/career";
 @import "partials/finances";
+@import "partials/audit";
+@import "partials/schedule";
 
 *,
 *:after,
@@ -13,7 +15,6 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: all 0.3s ease;
 }
 
 ::selection {
@@ -162,5 +163,26 @@ button {
   }
   &.end {
     justify-content: flex-end;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.status {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  text-align: center;
+  padding-top: 3px;
+  display: inline-block;
+  &.green {
+    background: #7ED321;
+  }
+  &.red {
+    background: #D0011B
   }
 }
