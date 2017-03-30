@@ -1,10 +1,44 @@
-# - subject: ARTG
-#   code: 1250
-#   course: Design Process Context and Systems
-#   type: Studio
-#   sections-offered: 4
-#   level: Undergraduate
-#   credits: 4
+- subject: ARTG
+  code: 1250
+  course: Design Process Context and Systems
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+    - section: 02
+      professor: J. Kane
+      days: F
+      time: 8:00am - 11:30am
+      location: Ryder Hall 427
+      seats: 20/20
+      crn: 10020
+    - section: 03
+      professor: K. Terrado
+      days: F
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399A
+      seats: 20/20
+      crn: 14883
+    - section: 04
+      professor: K. Terrado
+      days: T
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399A
+      seats: 20/20
+      crn: 16430
 
 - subject: ARTG
   code: 2250
@@ -20,21 +54,303 @@
   restrictions: Must be enrolled as Undergraduate
   sections:
     - section: 01
-      professor: SP '15
+      professor: K. Terrado
       days: R
       time: 8:00am - 11:30am
       location: Ryder Hall 399
       seats: 20/20
       crn: 10883
     - section: 02
-      professor: SP '15
+      professor: J. Kane
+      days: F
+      time: 8:00am - 11:30am
+      location: Ryder Hall 427
+      seats: 20/20
+      crn: 10020
+    - section: 03
+      professor: K. Terrado
+      days: F
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399A
+      seats: 20/20
+      crn: 14883
+    - section: 04
+      professor: K. Terrado
+      days: T
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399A
+      seats: 20/20
+      crn: 16430
+
+
+
+- subject: ARTG
+  code: 2251
+  course: Type Tools
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
       days: R
       time: 8:00am - 11:30am
       location: Ryder Hall 399
       seats: 20/20
       crn: 10883
-    - section: 03
-      professor: SP '15
+
+- subject: ARTG
+  code: 2252
+  course: Graphic Design 1
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 2260
+  course: Programming Basics
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 2400
+  course: Interaction Design 1 Responsive
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 3250
+  course: Physical Computing
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 3350
+  course: Typography 2
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 3450
+  course: Graphic Design 2
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 3451
+  course: Information Design 1
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 3460
+  course: Identity and Brand Design
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 3462
+  course: Experience Design 1
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 3700
+  course: Interaction Design 2 Mobile
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 4550
+  course: Design Degree Project 1
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
+      days: R
+      time: 8:00am - 11:30am
+      location: Ryder Hall 399
+      seats: 20/20
+      crn: 10883
+
+- subject: ARTG
+  code: 4551
+  course: Design Degree Project 2
+  type: Studio
+  sections-offered: 4
+  level: Undergraduate
+  credits: 4
+  description: Introduces typography as the basis of graphic design and visual communication. Guides students through an understanding of letterforms, words, sentences, and text as both image and information. Studies form, context, and visual meaning. Introduces use of the typographic grid and issues of hierarchy and legibility through assigned projects, readings, and lectures. Includes the historical evolution of typefaces and their classification as a rational system.
+  prereqs: ARTF 1122
+  coreqs: ARTG 2251
+  attributes: NUpath Creative Express/Innov, UG Col of Arts, Media & Design, Ryder Hall Access
+  restrictions: Must be enrolled as Undergraduate
+  sections:
+    - section: 01
+      professor: K. Terrado
       days: R
       time: 8:00am - 11:30am
       location: Ryder Hall 399

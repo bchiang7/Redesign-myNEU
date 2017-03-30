@@ -39,27 +39,18 @@ $( document ).ready( function() {
   });
 
 
-  $('#schedule .accordion .single-course').click(function(ev) {
+  $('#schedule .accordion .class').click(function(ev) {
     const _this = $(this);
-    const dropDown = _this.closest('.single-course').find('.detail-container');
-    const notDropDown = _this.closest('.accordion').find('.detail-container').not(dropDown);
-    const rightTarget = _this.hasClass('single-course');
+    const dropDown = _this.next('.detail-container');
 
-    console.log(ev.currentTarget);
-
-    // notDropDown.slideUp();
-
-    if (rightTarget) {
-      if (_this.hasClass('active')) {
-        _this.removeClass('active');
-      } else {
-        _this.closest('.accordion').find('a.active').removeClass('active');
-        _this.addClass('active');
-      }
-
-      dropDown.stop(false, true).slideToggle();
-      // ev.preventDefault();
+    if (_this.hasClass('active')) {
+      _this.removeClass('active');
+    } else {
+      _this.addClass('active');
     }
+
+    dropDown.stop(false, true).slideToggle();
+    ev.preventDefault();
 
   });
 
@@ -70,7 +61,6 @@ $( document ).ready( function() {
     const selectVal2 = $('.select-wrapper.subject select').val() !== null;
     const completeVals = selectVal1 && selectVal2;
     if (selectVal1 && selectVal2) {
-      console.log('in');
       $('#view-classes').prop("disabled", false);
       $('#view-classes').addClass('red')
     }
@@ -81,10 +71,34 @@ $( document ).ready( function() {
     const selectVal2 = $('.select-wrapper.subject select').val() !== null;
     const completeVals = selectVal1 && selectVal2;
     if (completeVals && $(this).hasClass('red')) {
-      console.log('close');
-      $('#schedule .modal').fadeOut();
+      $('#schedule .modal.prompt').fadeOut();
       $('#schedule .container').removeClass('blur');
     }
+  });
+
+  $('.saved-button').click(function() {
+    $('.modal.saved-courses').fadeIn();
+  });
+
+  $('.modal.saved-courses .close').click(function() {
+    $('.modal.saved-courses').fadeOut();
+  });
+
+  $('.course-section .button.save').click(function() {
+    var savedVal = $('.saved-button .saved').text();
+    var newVal = (parseInt(savedVal) + 1).toString();
+    $('.saved-button .saved').addClass('not-zero').text(newVal);
+    $('.saved-button').addClass('active');
+    setTimeout(function() {
+      $('.saved-button').removeClass('active');
+    }, 3000);
+
+  });
+
+  $('#register #register-button').click(function() {
+    $('#register .container').addClass('blur');
+    $('#register .success-modal').fadeIn();
+    setTimeout(function(){ window.location.href = "/dashboard"; }, 3000);
   });
 
 

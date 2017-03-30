@@ -1,0 +1,37 @@
+---
+layout: default
+title: Register
+permalink: /register/
+---
+
+<div id="register" class="content">
+  {% include blur.html %}
+  <div class="container">
+    <div class="panel">
+      <div class="header">Course Registration</div>
+      <p class="instructions">Pick four (4) courses to register for the semester. If you wish to register for more than four courses, please obtain the permission of your academic advisor prior to your registration time.</p>
+
+      <div class="use-saved">
+        <h3>My Saved Courses</h3>
+        <h4>Spring 2017</h4>
+        <p>
+          <input type="checkbox" id="cbox1" value="first_checkbox" checked="checked">
+          <label for="cbox1">ARTG 2250 Typography 1, Fridays @ 8am with Kane</label>
+        </p>
+      </div>
+
+      <div class="use-crn">
+        <h4>Or add a course with CRN</h4>
+        <input type="text" name="" placeholder="00000">
+      </div>
+
+      <button id="register-button" class="button red">Register for Selected Classes</button>
+    </div>
+  </div>
+
+  <div class="success-modal">
+    <div class="status green"><i class="material-icons">done</i></div>
+    <p>Registration success!</p>
+    <p>Redirecting to Dashboard...</p>
+  </div>
+</div>

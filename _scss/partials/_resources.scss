@@ -2,8 +2,10 @@
   .study {
     height: 500px;
   }
-  .tech, .enviro {
-    width: 360px;
+  .enviro {
+    height: 200px;
+    position: relative;
+    top: 200px;
   }
   .end {
     position: relative;

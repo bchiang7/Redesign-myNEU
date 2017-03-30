@@ -7,25 +7,44 @@
     width: 500px;
     height: 500px;
     position: absolute;
-    top: 30px;
+    top: 20px;
     left: 0;
     right: 0;
     border: 1px solid #DFE3E9;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
     z-index: 2;
-
+    &.saved-courses {
+      display: none;
+    }
     .modal-header {
       text-align: center;
       padding: 20px;
       border-bottom: 1px solid #DFE3E9;
       font-size: 24px;
       font-weight: 500;
+      .material-icons {
+        float: right;
+        cursor: pointer;
+        &:hover {
+          color: #7F8FA4;
+        }
+      }
     }
     .modal-body {
-      padding: 20px 100px;
+      padding: 20px 40px;
+      ol {
+        padding-left: 15px;
+        margin: 10px 0;
+        font-weight: 500;
+      }
+      p {
+        color: #7F8FA4;
+        margin-bottom: 20px;
+      }
       .select-wrapper {
         display: block;
         margin: 20px auto 50px;
+        max-width: 300px;
       }
       label {
         color: #7F8FA4;
@@ -64,15 +83,26 @@
   .container {
     .header {
       margin: 5px 5px 25px;
-      .saved {
-        background: #ced0da;
-        color: #fff;
-        border-radius: 100%;
-        width: 20px;
-        height: 20px;
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 10px;
+      .saved-button {
+        transition: all 0.3s ease;
+        &.active {
+          border: 3px solid #7ed321;
+          box-shadow: 0px 0px 15px #7ed321;
+        }
+        .saved {
+          background: #ced0da;
+          color: #fff;
+          border-radius: 100%;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 10px;
+          &.not-zero {
+            background: #7ED321;
+          }
+        }
       }
     }
     .courses {
@@ -80,6 +110,7 @@
       box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
       border-radius: 4px;
       width: 100%;
+      max-width: 1080px;
 
       .categories {
         font-weight: 500;
@@ -102,16 +133,22 @@
           border: 1px solid #f3f3f3;
           border-left: none;
           border-right: none;
-          cursor: pointer;
           &:hover {
-            background: #fafafa;
+            background: #f3f3f3;
           }
-          &.active {
-            background: #DFE3E9;
+          .material-icons {
+            transition: all 0.25s ease;
           }
           .class {
             display: flex;
-            margin: 15px 30px;
+            padding: 15px 30px;
+            cursor: pointer;
+            &.active {
+              background: #DFE3E9;
+              .material-icons {
+                transform: rotate(180deg);
+              }
+            }
           }
           span {
             display: inline-block;
@@ -120,12 +157,17 @@
           }
 
           .detail-container {
-            // display: none;
+            display: none;
             margin: 0;
             background: #fff;
-            position: relative;
-            padding: 15px 30px;
             color: #4A4A4A;
+            position: relative;
+            padding: 20px 30px;
+            color: #4A4A4A;
+
+            span {
+              color: #4A4A4A;
+            }
 
             .description {
               margin-bottom: 15px;
@@ -146,11 +188,8 @@
                 &:hover {
                   background: transparent;
                 }
-                span {
-                  // flex-grow: 1;
-                }
                 .button {
-                  width: 110px;
+                  width: 140px;
                   margin: 0 30px 0 0;
                   padding: 0;
                   font-size: 13px;
@@ -164,35 +203,40 @@
                   }
                 }
                 &.headers {
-                  margin-left: 190px;
+                  border-bottom: 1px solid #DFE2E5;
                   span {
                     color: #4A4A4A;
                     font-weight: 500;
                   }
                   .button {
                     opacity: 0;
-                    // margin: 0;
                   }
                 }
-                &.body {
+                .section, .seats, .crn {
+                  width: 70px;
                 }
-                .section, .professor {
-                  width: 60px;
+                .professor {
+                  width: 100px;
                 }
+                .days, .time, .location {
+                  width: 150px;
+                }
+
                 .days {
-
-                }
-                .time {
-
-                }
-                .location {
-
-                }
-                .seats {
-
-                }
-                .crn {
-
+                  .day {
+                    margin: 0 1px;
+                    text-align: center;
+                    &.active {
+                      color: #fff;
+                      background: #7F8FA4;
+                      font-weight: 500;
+                      width: 22px;
+                      height: 22px;
+                      line-height: 22px;
+                      border-radius: 100%;
+                      position: relative;
+                    }
+                  }
                 }
               }
             }
