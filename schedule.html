@@ -5,42 +5,103 @@ permalink: /schedule-of-classes/
 ---
 
 <div id="schedule" class="content">
-  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="blur-svg">
-    <defs>
-      <filter id="blur-filter">
-        <feGaussianBlur stdDeviation="3"></feGaussianBlur>
-      </filter>
-    </defs>
-  </svg>
-  <div class="blur">
-    <h3>Example</h3>
-    <p>This example shows the effect.</p>
-  </div>
-  <div class="modal">
+  <!-- <div class="modal">
     <div class="modal-header">Schedule of Classes</div>
     <div class="modal-body">
-      <div class="select-semester">
-        <label>Select a semester</label>
-        <div class="dropdown closed">
-          <div class="title">Pick user</div>
-          <div class="dropdown-menu">
-            <ul>
-              <li>Henry Christensen</li>
-              <li>Imelda Silva</li>
-              <li>Marah Mueller</li>
-              <li>Holly Fitzpatrick</li>
-              <li>Lamar Flynn</li>
-              <li>Jameson Davidson</li>
-              <li>Harper Lynn</li>
-              <li>Keith Woods</li>
-              <li>Cally Dominguez</li>
-            </ul>
-          </div>
-        </div>
+      <div class="select-wrapper semester">
+        <label for="">Select a semester</label>
+        <select>
+          <option disabled selected>--</option>
+          <option>Summer 2 2017</option>
+          <option>Summer 1 2017</option>
+          <option>Spring 2017</option>
+          <option>Fall 2016</option>
+          <option>Spring 2015</option>
+        </select>
       </div>
+      <div class="select-wrapper subject">
+        <label for="">Select a subject</label>
+        <select>
+          <option disabled selected>--</option>
+          <option>Accounting - ACCT</option>
+          <option>Anthropology - ANTH</option>
+          <option>Architecture - ARCH</option>
+          <option>Army ROTC - ARMY</option>
+          <option>Art - Design - ARTG</option>
+          <option>Art - Fundamentals - ARTF</option>
+        </select>
+      </div>
+      <button id="view-classes" class="button" disabled>View Classes</button>
     </div>
   </div>
-  <div class="panel">
 
+  {% include blur.html %}
+-->
+<!-- <div class="container blur"> -->
+<div class="container">
+  <h3 class="header">Schedule of Classes <span class="subheader">Spring 2017</span><div class="buttons"><div class="button">My Saved Courses <span class="saved">0</span></div><div class="button red">Register Now</div></div></h3>
+  <div class="courses">
+    <div class="categories">
+      <div class="class">
+        <span class="subject">Subject</span>
+        <span class="code">Code</span>
+        <span class="course">Course</span>
+        <span class="type">Type</span>
+        <span class="sections">Sections</span>
+        <span class="level">Level</span>
+        <span class="credits">Credits</span>
+        <i class="material-icons">keyboard_arrow_down</i>
+      </div>
+    </div>
+    <ul class="accordion">
+      {% for course in site.data.schedule %}
+      <li class="single-course">
+        <div class="class">
+          <span class="subject">{{ course.subject }}</span>
+          <span class="code">{{ course.code }}</span>
+          <span class="course">{{ course.course }}</span>
+          <span class="type">{{ course.type }}</span>
+          <span class="sections">{{ course.sections-offered }}</span>
+          <span class="level">{{ course.level }}</span>
+          <span class="credits">{{ course.credits }}</span>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </div>
+        <div class="detail-container">
+          <p class="description">{{ course.description }}</p>
+          <p class="reqs">
+            <span class="prereqs"><strong>Prerequisites:</strong> {{ course.prereqs }}</span>
+            <span class="coreqs"><strong>Corequisites:</strong> {{ course.coreqs }}</span>
+          </p>
+          <p class="attributes"><strong>Attributes:</strong> {{ course.attributes }}</p>
+          <p class="restrictions"><strong>Restrictions:</strong> {{ course.restrictions }}</p>
+
+          <ul class="sections-container">
+            <li class="headers">
+              <span class="section">Section</span>
+              <span class="professor">Professor</span>
+              <span class="days">Days</span>
+              <span class="time">Time</span>
+              <span class="location">Location</span>
+              <span class="seats">Seats</span>
+              <span class="crn">CRN</span>
+            </li>
+            {% for section in course.sections %}
+            <li class="course-section">
+              <span class="button save"><i class="material-icons">add_circle</i>Save to My Courses</span>
+              <span class="section">{{ section.section }}</span>
+              <span class="professor">{{ section.professor }}</span>
+              <span class="days">{{ section.days }}</span>
+              <span class="time">{{ section.time }}</span>
+              <span class="location">{{ section.location }}</span>
+              <span class="seats">{{ section.seats }}</span>
+              <span class="crn">{{ section.crn }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
+<!-- </div> -->

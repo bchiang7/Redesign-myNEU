@@ -51,15 +51,6 @@ input {
   padding: 10px;
 }
 
-button {
-  color: #fff;
-  padding: 0 20px;
-  height: 36px;
-  background-image: linear-gradient(-180deg, #F95359 3%, #DD151C 98%);
-  border: 1px solid #DB161E;
-  margin: 10px 0;
-}
-
 .content-container {
   position: relative;
   overflow: hidden;
@@ -91,41 +82,22 @@ button {
           text-decoration: underline;
         }
       }
-      .header {
-        font-size: 24px;
-        font-weight: 500;
-        margin: 5px 0 15px;
-        .subheader {
-          color: #9B9B9B;
-          margin-left: 10px;
-        }
-        .buttons {
-          display: inline-block;
-          position: relative;
-          float: right;
-          top: -7px;
-          right: -7px;
-          font-size: 14px;
-        }
-        .button {
-          background: #ccc;
-          border-radius: 4px;
-          color: #fff;
-          padding: 5px 20px;
-          margin: 0 5px;
-          display: inline-block;
-          &:hover {
-            opacity: 0.8;
-          }
-          &.red {
-            background-image: linear-gradient(-180deg, #F95359 3%, #DD151C 98%);
-            border: 1px solid #DB161E;
-          }
-          &.black {
-            background-image: linear-gradient(-180deg, #516173 3%, #3A4857 98%);
-            border: 1px solid #3B4858;
-          }
-        }
+    }
+    .header {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 5px 0 15px;
+      .subheader {
+        color: #9B9B9B;
+        margin-left: 10px;
+      }
+      .buttons {
+        display: inline-block;
+        position: relative;
+        float: right;
+        top: -7px;
+        right: -7px;
+        font-size: 14px;
       }
     }
   }
@@ -154,6 +126,32 @@ button {
   }
 }
 
+.button {
+  background: #ccc;
+  color: #354052;
+  padding: 7px 20px;
+  margin: 0 5px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(0deg, #F2F4F7 0%, #FFFFFF 100%);
+  border: 1px solid #CED0DA;
+  border-radius: 4px;
+  &:hover {
+    opacity: 0.8;
+  }
+  &.red {
+    background-image: linear-gradient(-180deg, #F95359 3%, #DD151C 98%) !important;
+    border: 1px solid #DB161E !important;
+    color: #fff !important;
+  }
+  &.black {
+    background-image: linear-gradient(-180deg, #516173 3%, #3A4857 98%) !important;
+    border: 1px solid #3B4858 !important;
+    color: #fff !important;
+  }
+}
+
 .flex {
   display: flex;
   width: auto;
@@ -169,6 +167,7 @@ button {
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .status {
@@ -185,4 +184,19 @@ ul {
   &.red {
     background: #D0011B
   }
+}
+
+.blur {
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+  -webkit-filter: url(#blur-filter);
+  filter: url(#blur-filter);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+.blur-svg {
+  display: none;
+}
+
+p {
+  margin: 0 0 10px;
 }

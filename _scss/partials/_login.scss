@@ -1,9 +1,7 @@
 #login {
-  background: url(../img/centennial.jpg) no-repeat center center fixed;
+  // background: url(../img/centennial.jpg) no-repeat center center fixed;
+  background: url(../img/marino.jpg) no-repeat center center fixed;
   height: 100vh;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   position: relative;
   &:after{
@@ -13,7 +11,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.5);
     z-index: 0;
   }
   #container {
