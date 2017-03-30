@@ -44,7 +44,7 @@
           <div class="caption">Academics</div>
         </div>
       </a>
-      <a href="/resources" class="link-container {% if page.title == "Resources" %}active{% endif %}">
+      <a href="/resources" class="link-container {% if page.title == "Resources" or page.title == "Appt Cal" %}active{% endif %}">
         <div class="highlight"></div>
         <div class="link">
           <i class="material-icons">collections_bookmark</i>
@@ -71,8 +71,7 @@
 
   <div class="content-container">{{ content }}</div>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" src="../js/main.js"></script>
+  {% include scripts.html %}
 
 </body>
 </html>

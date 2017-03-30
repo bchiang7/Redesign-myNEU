@@ -40,31 +40,4 @@
 
   }
 
-  .success-modal {
-    background: #fff;
-    border-radius: 4px;
-    margin: 0 auto;
-    width: 300px;
-    height: 250px;
-    padding: 35px;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    right: 0;
-    border: 1px solid #DFE3E9;
-    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
-    z-index: 2;
-    text-align: center;
-    font-weight: 500;
-    display: none;
-    .status {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 20px;
-      .material-icons {
-        font-size: 72px;
-        margin-top: 10px;
-      }
-    }
-  }
 }

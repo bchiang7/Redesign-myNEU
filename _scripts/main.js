@@ -3,6 +3,10 @@ $( document ).ready( function() {
   // clear all inputs
   $('input').val('');
 
+  $('.modal .close').click(function() {
+    $('.modal').fadeOut();
+  });
+
   // only direct to dashboard if username and pwd are populated
   $('#login-btn').click(function() {
     const val1 = $('#login .username').val() !== '';
@@ -19,7 +23,6 @@ $( document ).ready( function() {
   // });
 
   // $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
-
   $('#degree-audit .accordion a').click(function(ev) {
     const _this = $(this);
     const dropDown = _this.closest('li').find('.detail-container');
@@ -80,10 +83,6 @@ $( document ).ready( function() {
     $('.modal.saved-courses').fadeIn();
   });
 
-  $('.modal.saved-courses .close').click(function() {
-    $('.modal.saved-courses').fadeOut();
-  });
-
   $('.course-section .button.save').click(function() {
     var savedVal = $('.saved-button .saved').text();
     var newVal = (parseInt(savedVal) + 1).toString();
@@ -101,5 +100,68 @@ $( document ).ready( function() {
     setTimeout(function(){ window.location.href = "/dashboard"; }, 3000);
   });
 
+
+
+  $('#calendar').fullCalendar({
+    weekends: false,
+    defaultView: 'agendaWeek',
+    height: 590,
+    allDaySlot: false,
+    nowIndicator: true,
+    scrollTime: '08:00:00',
+    events: [
+    {
+      title  : 'Student Appointments: Aileen Yates',
+      start  : '2017-03-31T09:00:00',
+      end    : '2017-03-31T12:00:00',
+      url    : '#',
+      className: 'Aileen'
+    },
+    {
+      title  : 'Student Appointments: Prajna Kulkarni',
+      start  : '2017-03-28T13:00:00',
+      end    : '2017-03-28T15:00:00',
+      url    : '#',
+      className: 'Prajna'
+    },
+    {
+      title  : 'Student Appointments: Prajna Kulkarni',
+      start  : '2017-04-04T09:00:00',
+      end    : '2017-04-04T11:00:00',
+      url    : '#',
+      className: 'Prajna'
+    },
+    {
+      title  : 'Student Appointments: Aileen Yates',
+      start  : '2017-04-07T13:00:00',
+      end    : '2017-04-07T15:00:00',
+      url    : '#',
+      className: 'Aileen'
+    }
+    ]
+  });
+
+  $('.fc-event').click(function() {
+    $('.modal.appt').fadeIn();
+  });
+
+  function setColor() {
+    $('.Prajna').prepend('<span class="color pink"></span>');
+    $('.Aileen').prepend('<span class="color yellow"></span>');
+  }
+  setColor();
+
+  $('.fc-button').click(function() { setColor() });
+
+  $('#appointment-calendar #request-appt').click(function() {
+    $('#appointment-calendar .container').addClass('blur');
+    $('.modal.appt').fadeOut();
+    $('#appointment-calendar .success-modal').fadeIn();
+
+    setTimeout(function(){
+      $('#appointment-calendar .success-modal').fadeOut();
+      $('#appointment-calendar .container').removeClass('blur');
+    }, 3000);
+  });
 
 });

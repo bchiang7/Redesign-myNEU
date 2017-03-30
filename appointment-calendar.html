@@ -1,0 +1,80 @@
+---
+layout: default
+title: Appt Cal
+permalink: /appointment-calendar/
+---
+
+<div id="appointment-calendar" class="content">
+  {% include blur.html %}
+  {% include appointment-modal.html %}
+  <div class="container">
+    <div class="top"></div>
+    <div class="side">
+      <h3>Appointment Calendar</h3>
+      <div class="find-cal">
+        <h4>Find A Calendar</h4>
+        <hr/>
+        <div class="select-wrapper">
+          <select>
+            <option disabled selected>Select a calendar list</option>
+            <option>Bouve</option>
+            <option>Career Services</option>
+            <option>Center of Community Service</option>
+            <option>Co-op</option>
+            <option>College of Arts, Media, &amp; Design</option>
+            <option>College of Computer &amp; Information Science</option>
+            <option>College of Engineering</option>
+            <option>College of Professional Studies</option>
+            <option>College of Science</option>
+            <option>College of Social Science &amp; Humanities</option>
+            <option>D'Amore-McKim School of Business</option>
+            <option>Disability Resource Center</option>
+            <option>General Studies Program</option>
+            <option>Global Experience Office</option>
+            <option>International Security Office</option>
+            <option>Learning Disabilities Program</option>
+            <option>Northeastern Explore Program</option>
+            <option>PreHealth Advising</option>
+            <option>Student Athlete Support Services</option>
+          </select>
+        </div>
+      </div>
+      <div class="find-advisor">
+        <h4>Your Advisors</h4>
+        <hr/>
+        <div class="advisor-list">
+          <div class="advisor">
+            <span class="color pink"></span>
+            <label for="checkbox-1">Prajna Kulkarni (Academic)</label>
+            <input type="checkbox" name="checkbox-1" id="checkbox-1" class="checkbox" checked="checked" />
+          </div>
+          <div class="advisor">
+            <span class="color yellow"></span>
+            <label for="checkbox-1">Aileen Yates (Co-op)</label>
+            <input type="checkbox" name="checkbox-1" id="checkbox-1" class="checkbox" checked="checked" />
+          </div>
+          <div class="advisor">
+            <span class="color blue"></span>
+            <label for="checkbox-1">Melissa Peikin</label>
+            <input type="checkbox" name="checkbox-1" id="checkbox-1" class="checkbox" />
+          </div>
+          <div class="advisor">
+            <span class="color purple"></span>
+            <label for="checkbox-1">Katie Hughes</label>
+            <input type="checkbox" name="checkbox-1" id="checkbox-1" class="checkbox" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cal">
+      <div id="calendar"></div>
+    </div>
+  </div>
+
+  <div class="success-modal">
+    <div class="status green"><i class="material-icons">done</i></div>
+    <p>Appointment request success!</p>
+    <p>Please check your email for a confirmation.</p>
+    <!-- <p>Redirecting to Dashboard...</p> -->
+  </div>
+</div>
