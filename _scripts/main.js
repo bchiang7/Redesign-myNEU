@@ -125,39 +125,43 @@ $( document ).ready( function() {
       start  : '2017-03-31T09:00:00',
       end    : '2017-03-31T12:00:00',
       url    : '#',
-      className: 'Aileen'
+      className: 'aileen'
     },
     {
       title  : 'Student Appointments: Prajna Kulkarni',
       start  : '2017-03-28T13:00:00',
       end    : '2017-03-28T15:00:00',
       url    : '#',
-      className: 'Prajna'
+      className: 'prajna'
     },
     {
       title  : 'Student Appointments: Prajna Kulkarni',
       start  : '2017-04-04T09:00:00',
       end    : '2017-04-04T11:00:00',
       url    : '#',
-      className: 'Prajna'
+      className: 'prajna'
     },
     {
       title  : 'Student Appointments: Aileen Yates',
       start  : '2017-04-07T13:00:00',
       end    : '2017-04-07T15:00:00',
       url    : '#',
-      className: 'Aileen'
+      className: 'aileen'
     }
     ]
   });
 
-  $('.fc-event').click(function() {
-    $('.modal.appt').fadeIn();
+  $('.fc-event.aileen').click(function() {
+    $('.modal.appt').addClass('aileen-modal').removeClass('prajna-modal').fadeIn();
+  });
+
+  $('.fc-event.prajna').click(function() {
+    $('.modal.appt').addClass('prajna-modal').removeClass('aileen-modal').fadeIn();
   });
 
   function setColor() {
-    $('.Prajna').prepend('<span class="color pink"></span>');
-    $('.Aileen').prepend('<span class="color yellow"></span>');
+    $('.prajna').prepend('<span class="color pink"></span>');
+    $('.aileen').prepend('<span class="color yellow"></span>');
   }
   setColor();
 

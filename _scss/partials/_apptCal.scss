@@ -184,9 +184,30 @@
   .modal.appt {
     height: 570px;
     display: none;
+
+    &.aileen-modal {
+      .modal-header {
+        .aileen-name {
+          display: inline;
+        }
+      }
+    }
+    &.prajna-modal {
+      .modal-header {
+        .prajna-name {
+          display: inline;
+        }
+      }
+    }
     .modal-header {
       text-align: left;
       font-size: 18px;
+      .aileen-name {
+        display: none;
+      }
+      .prajna-name {
+        display: none;
+      }
     }
     .modal-body {
       padding: 15px 30px;
