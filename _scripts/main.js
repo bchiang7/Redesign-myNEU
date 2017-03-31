@@ -12,7 +12,11 @@ $( document ).ready( function() {
     const val1 = $('#login .username').val() !== '';
     const val2 = $('#login .password').val() !== '';
     if (val1 && val2) {
-      $(this).attr("href", "/dashboard");
+      if (window.location.href.indexOf("localhost") > -1) {
+        $(this).attr("href", "/dashboard");
+      } else {
+        $(this).attr("href", "http://brittanychiang.com/Redesign-myNEU/dashboard");
+      }
     }
   });
 
@@ -97,7 +101,13 @@ $( document ).ready( function() {
   $('#register #register-button').click(function() {
     $('#register .container').addClass('blur');
     $('#register .success-modal').fadeIn();
-    setTimeout(function(){ window.location.href = "/dashboard"; }, 3000);
+    setTimeout(function(){
+      if (window.location.href.indexOf("localhost") > -1) {
+        window.location.href = "/dashboard";
+      } else {
+        window.location.href = "http://brittanychiang.com/Redesign-myNEU/dashboard";
+      }
+    }, 3000);
   });
 
 
