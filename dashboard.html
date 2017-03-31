@@ -9,16 +9,12 @@ permalink: /dashboard/
     <h3 class="header">Welcome back, {{site.username}}!</h3>
     <div class="info">
       <div class="col">
-        <img class="avatar" src="{{site.avatar}}" alt="">
-        <div class="container">
-          <div class="name"><strong>{{site.fullname}}</strong></div>
-          <div class="nuid">{{site.nuid}}</div>
-        </div>
+        <div class="name"><strong>{{site.fullname}}</strong></div>
+        <div class="nuid"><strong>NUID: </strong>{{site.nuid}}</div>
       </div>
       <div class="col">
         <div class="major"><strong>Major: </strong>Computer Science</div>
         <div class="minor"><strong>Minor: </strong>Interaction Design</div>
-        <div class="track"><strong>Co-op Track: </strong>AA</div>
       </div>
       <div class="col">
         <div class="grad-date"><strong>Graduation Date: </strong>May 2018</div>
@@ -26,74 +22,85 @@ permalink: /dashboard/
       </div>
     </div>
   </div>
-  <div class="panel courses">
-    <h3 class="header">Courses &amp; Grades <span class="subheader">Spring 2017</span></h3>
-    <table>
-      <tbody>
-        <tr>
-          <td class="subject">CS 3700</td>
-          <td class="name">Networks and Distributed Systems</td>
-          <td class="prof">P. Desnoyers</td>
-          <td><span class="grade b">B-</span><span class="per">80.27%</span></td>
-        </tr>
-        <tr>
-          <td class="subject">DS 4200</td>
-          <td class="name">Information Visualization</td>
-          <td class="prof">M. Borkin</td>
-          <td><span class="grade a">A</span><span class="per">95.12%</span></td>
-        </tr>
-        <tr>
-          <td class="subject">PHIL 1145</td>
-          <td class="name">Technology and Human Values</td>
-          <td class="prof">B. Yelle</td>
-          <td><span class="grade a">A-</span><span class="per">91.78%</span></td>
-        </tr>
-        <tr>
-          <td class="subject">IS 4900</td>
-          <td class="name">Information Science Senior Project</td>
-          <td class="prof">C. Freifeld</td>
-          <td><span class="grade b">B-</span><span class="per">87.86%</span></td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="flex">
+    <div class="panel courses">
+      <h3 class="header">Courses &amp; Grades <span class="subheader">Spring 2017</span></h3>
+      <table>
+        <tbody>
+          <tr>
+            <td class="subject">CS 3700</td>
+            <td class="name">Networks and Distributed Systems</td>
+            <td class="prof">P. Desnoyers</td>
+            <td><span class="grade b">B-</span><span class="per">80.27%</span></td>
+          </tr>
+          <tr>
+            <td class="subject">DS 4200</td>
+            <td class="name">Information Visualization</td>
+            <td class="prof">M. Borkin</td>
+            <td><span class="grade a">A</span><span class="per">95.12%</span></td>
+          </tr>
+          <tr>
+            <td class="subject">PHIL 1145</td>
+            <td class="name">Technology and Human Values</td>
+            <td class="prof">B. Yelle</td>
+            <td><span class="grade a">A-</span><span class="per">91.78%</span></td>
+          </tr>
+          <tr>
+            <td class="subject">IS 4900</td>
+            <td class="name">Information Science Senior Project</td>
+            <td class="prof">C. Freifeld</td>
+            <td><span class="grade b">B-</span><span class="per">87.86%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel links">
+      <h3 class="header">Recently Visited</h3>
+      <a class="panel-link" href="/schedule-of-classes">Schedule of Classes</a>
+      <a class="panel-link" href="/audit">Degree Audit</a>
+      <a class="panel-link" href="/appointment-calendar">Appointment Calendar</a>
+      <a class="panel-link" href="/appointment-calendar">Resources</a>
+    </div>
   </div>
-  <div class="panel finances">
-    <h3 class="header">My Finances</h3>
-    <table>
-      <tbody>
-        <tr>
-          <td class="thing">Tuition and Fees</td>
-          <td class="desc">$0.00</td>
-        </tr>
-        <tr>
-          <td class="thing">Other Charges</td>
-          <td class="desc bad">$239.35</td>
-        </tr>
-        <tr>
-          <td class="thing">Husky Card</td>
-          <td class="desc good">$20.17</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="panel news">
-    <h3 class="header">News @ Northeastern</h3>
-    <div class="article-container">
-      <div class="article">
-        <img class="thumbnail" src="https://www.usnews.com/img/college-photo_8852.jpg" alt="">
-        <div class="caption">Lorem ipsum dolor ipsum dolor ipsum dolor ipsum dolor</div>
-      </div>
-      <div class="article">
-        <img class="thumbnail" src="https://www.usnews.com/img/college-photo_8852.jpg" alt="">
-        <div class="caption">Lorem ipsum dolor ipsum dolor ipsum dolor ipsum dolor</div>
-      </div>
-      <div class="article">
-        <img class="thumbnail" src="https://www.usnews.com/img/college-photo_8852.jpg" alt="">
-        <div class="caption">Lorem ipsum dolor ipsum dolor ipsum dolor ipsum dolor</div>
-      </div>
-      <div class="article">
-        <img class="thumbnail" src="https://www.usnews.com/img/college-photo_8852.jpg" alt="">
-        <div class="caption">Lorem ipsum dolor ipsum dolor ipsum dolor ipsum dolor</div>
+  <div class="flex">
+    <div class="panel finances">
+      <h3 class="header">My Finances</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td class="thing">Tuition and Fees</td>
+            <td class="desc">$0.00</td>
+          </tr>
+          <tr>
+            <td class="thing">Other Charges</td>
+            <td class="desc bad">$239.35</td>
+          </tr>
+          <tr>
+            <td class="thing">Husky Card</td>
+            <td class="desc good">$20.17</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel news">
+      <h3 class="header">News @ Northeastern</h3>
+      <div class="article-container">
+        <div class="article">
+          <img class="thumbnail" src="../img/centennial.jpg" alt="">
+          <div class="caption">Lorem ipsum dolor sit...</div>
+        </div>
+        <div class="article">
+          <img class="thumbnail" src="../img/centennial.jpg" alt="">
+          <div class="caption">Lorem ipsum dolor sit...</div>
+        </div>
+        <div class="article">
+          <img class="thumbnail" src="../img/centennial.jpg" alt="">
+          <div class="caption">Lorem ipsum dolor sit...</div>
+        </div>
+        <div class="article">
+          <img class="thumbnail" src="../img/centennial.jpg" alt="">
+          <div class="caption">Lorem ipsum dolor sit...</div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,8 +1,9 @@
 #academics {
   .schedule {
-    width: calc(100% - 20px);
-    height: 300px;
+    width: calc(100% - 10px);
+    height: 320px;
     table {
+      font-size: 15px;
       thead tr {
         font-weight: 500;
       }

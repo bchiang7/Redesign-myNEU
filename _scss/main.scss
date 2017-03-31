@@ -56,7 +56,7 @@ input {
 .content-container {
   position: relative;
   overflow: hidden;
-  top: 70px;
+  top: 60px;
   left: 150px;
   width: calc(100% - 150px);
   height: calc(100% - 70px);
@@ -295,6 +295,10 @@ select {
   }
   .modal-body {
     padding: 20px 40px;
+    h4 {
+      color: #354052;
+      margin-bottom: 10px;
+    }
     ol {
       padding-left: 15px;
       margin: 10px 0;
@@ -303,6 +307,8 @@ select {
     p {
       color: #7F8FA4;
       margin-bottom: 20px;
+      font-size: 15px;
+      line-height: 20px;
     }
     .button {
       font-weight: 500;
@@ -310,7 +316,7 @@ select {
       display: block;
       width: 140px;
       position: absolute;
-      bottom: 70px;
+      bottom: 40px;
       left: 0;
       right: 0;
       background: #EAEEF1;

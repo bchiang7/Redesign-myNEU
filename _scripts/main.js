@@ -17,10 +17,10 @@ $( document ).ready( function() {
   });
 
 
-  // on click: if dropdown doesn't have class of active, show options
-  // $('.top-bar .dropdown').on( "click", function() {
-  //   $('.dropdown-options').toggleClass('active');
-  // });
+  $('.top-bar .dropdown').on( "click", function(ev) {
+    $('.dropdown-options').slideToggle();
+    ev.preventDefault();
+  });
 
   // $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
   $('#degree-audit .accordion a').click(function(ev) {
