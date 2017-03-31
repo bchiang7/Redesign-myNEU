@@ -298,17 +298,26 @@ select {
     h4 {
       color: #354052;
       margin-bottom: 10px;
+      color: #7F8FA4;
     }
     ol {
       padding-left: 15px;
       margin: 10px 0;
       font-weight: 500;
+      color: #354052;
     }
     p {
-      color: #7F8FA4;
       margin-bottom: 20px;
       font-size: 15px;
       line-height: 20px;
+    }
+    .delete {
+      float: right;
+      cursor: pointer;
+      color: #354052;
+      &:hover {
+        color: #A20013;
+      }
     }
     .button {
       font-weight: 500;

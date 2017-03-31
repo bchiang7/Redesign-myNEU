@@ -1,4 +1,4 @@
-$( document ).ready( function() {
+$(document).ready(function() {
 
   // clear all inputs
   $('input').val('');
@@ -7,18 +7,29 @@ $( document ).ready( function() {
     $('.modal').fadeOut();
   });
 
-  // only direct to dashboard if username and pwd are populated
-  $('#login-btn').click(function() {
-    const val1 = $('#login .username').val() !== '';
-    const val2 = $('#login .password').val() !== '';
-    if (val1 && val2) {
-      if (window.location.href.indexOf("localhost") > -1) {
-        $(this).attr("href", "/dashboard");
-      } else {
-        $(this).attr("href", "http://brittanychiang.com/Redesign-myNEU/dashboard");
-      }
+  $('#login .password').on('keyup', function(e) {
+    if (e.keyCode == 13) {
+      $('#login-btn').click();
     }
   });
+
+  // only direct to dashboard if username and pwd are populated
+  $('#login-btn').click(function() {
+    login(1, false);
+  });
+
+  function login() {
+    const val1 = $('#login .username').val() !== '';
+    const val2 = $('#login .password').val() !== '';
+    console.log(val1, val2);
+    if (val1 && val2) {
+      if (window.location.href.indexOf("localhost") > -1) {
+        window.location.href = "/dashboard";
+      } else {
+        window.location.href = "http://brittanychiang.com/Redesign-myNEU/dashboard";
+      }
+    }
+  }
 
 
   $('.top-bar .dropdown').on( "click", function(ev) {
@@ -87,16 +98,43 @@ $( document ).ready( function() {
     $('.modal.saved-courses').fadeIn();
   });
 
+  var saved_counter = 0;
   $('.course-section .button.save').click(function() {
-    var savedVal = $('.saved-button .saved').text();
-    var newVal = (parseInt(savedVal) + 1).toString();
+    const savedVal = $('.saved-button .saved').text();
+    const newVal = (parseInt(savedVal) + 1).toString();
+
     $('.saved-button .saved').addClass('not-zero').text(newVal);
     $('.saved-button').addClass('active');
+    saved_counter++;
+    console.log(saved_counter);
+    localStorage.setItem('saved_counter', saved_counter);
+
     setTimeout(function() {
       $('.saved-button').removeClass('active');
     }, 3000);
-
   });
+
+  function checkCounter() {
+    const register = window.location.href.indexOf("register") > -1;
+    const schedule = window.location.href.indexOf("schedule") > -1;
+
+    if (register || schedule) {
+      if (localStorage.getItem("saved_counter") !== null) {
+        $('.type1').show();
+      } else {
+        $('.type1').hide();
+      }
+    }
+  }
+
+  // call checkCounter on every page
+  checkCounter();
+
+  $('.delete').click(function() {
+    $('.type1').hide();
+    localStorage.removeItem('saved_counter');
+  });
+
 
   $('#register #register-button').click(function() {
     $('#register .container').addClass('blur');
