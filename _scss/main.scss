@@ -278,6 +278,19 @@ select {
   z-index: 2;
   &.saved-courses {
     display: none;
+    height: 550px;
+    .modal-header .close {
+      float: right;
+    }
+    .modal-header .info {
+      float: left;
+    }
+    .saved-info {
+      display: none;
+    }
+    .instructions {
+      font-weight: 500;
+    }
   }
   .modal-header {
     text-align: center;

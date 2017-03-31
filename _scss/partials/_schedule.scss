@@ -1,18 +1,22 @@
 #schedule {
   padding: 30px;
 
-  .saved-courses {
-    height: 550px;
-  }
-
   .container {
     .header {
       margin: 5px 5px 25px;
       .saved-button {
         transition: all 0.3s ease;
+        width: 180px;
+        padding: 7px 10px;
+        // border: 3px solid transparent;
         &.active {
-          border: 3px solid #7ed321;
           box-shadow: 0px 0px 15px #7ed321;
+        }
+        &.scroll {
+          position: fixed;
+          top: 10px;
+          left: 500px;
+          z-index: 10;
         }
         .saved {
           background: #ced0da;
@@ -127,6 +131,15 @@
                     margin-right: 5px;
                     margin-top: -2px;
                   }
+                  &.save {
+                    width: auto;
+                    padding: 3px 10px;
+                    line-height: 20px;
+                  }
+                  &.disabled {
+                    opacity: 0.5;
+                    cursor: default;
+                  }
                 }
                 &.headers {
                   border-bottom: 1px solid #DFE2E5;
@@ -136,6 +149,7 @@
                   }
                   .button {
                     opacity: 0;
+                    margin-right: 25px;
                   }
                 }
                 .section, .seats, .crn {

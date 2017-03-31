@@ -7,6 +7,13 @@ $(document).ready(function() {
     $('.modal').fadeOut();
   });
 
+  $('.top-bar .dropdown').on( "click", function(ev) {
+    $('.dropdown-options').slideToggle();
+    ev.preventDefault();
+  });
+
+  // LOGIN =================================================================
+
   $('#login .password').on('keyup', function(e) {
     if (e.keyCode == 13) {
       $('#login-btn').click();
@@ -32,10 +39,7 @@ $(document).ready(function() {
   }
 
 
-  $('.top-bar .dropdown').on( "click", function(ev) {
-    $('.dropdown-options').slideToggle();
-    ev.preventDefault();
-  });
+  // DEGREE AUDIT =============================================================
 
   // $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
   $('#degree-audit .accordion a').click(function(ev) {
@@ -57,6 +61,8 @@ $(document).ready(function() {
   });
 
 
+  // SCHEDULE OF CLASSES ======================================================
+
   $('#schedule .accordion .class').click(function(ev) {
     const _this = $(this);
     const dropDown = _this.next('.detail-container');
@@ -71,8 +77,6 @@ $(document).ready(function() {
     ev.preventDefault();
 
   });
-
-
 
   $('#schedule select').change(function() {
     const selectVal1 = $('.select-wrapper.semester select').val() !== null;
@@ -94,19 +98,36 @@ $(document).ready(function() {
     }
   });
 
+
+  // MY SAVED COURSES ========================================================
+
+  $('.modal-header .info').click(function() {
+    $('.saved-courses .saved-info').fadeIn();
+  });
+
   $('.saved-button').click(function() {
+    checkCounter();
     $('.modal.saved-courses').fadeIn();
   });
+
+  $('#schedule').scroll(function() {
+    const scrollTop = $(this).scrollTop();
+    if (scrollTop > 80) {
+      $("#schedule .saved-button").addClass('scroll');
+    } else {
+      $("#schedule .saved-button").removeClass('scroll');
+    }
+ });
 
   var saved_counter = 0;
   $('.course-section .button.save').click(function() {
     const savedVal = $('.saved-button .saved').text();
     const newVal = (parseInt(savedVal) + 1).toString();
 
+    $(this).prop('disabled', true).addClass('disabled');
     $('.saved-button .saved').addClass('not-zero').text(newVal);
     $('.saved-button').addClass('active');
     saved_counter++;
-    console.log(saved_counter);
     localStorage.setItem('saved_counter', saved_counter);
 
     setTimeout(function() {
@@ -115,10 +136,10 @@ $(document).ready(function() {
   });
 
   function checkCounter() {
+    const academics = window.location.href.indexOf("academics") > -1;
     const register = window.location.href.indexOf("register") > -1;
     const schedule = window.location.href.indexOf("schedule") > -1;
-
-    if (register || schedule) {
+    if (academics || register || schedule) {
       if (localStorage.getItem("saved_counter") !== null) {
         $('.type1').show();
       } else {
@@ -126,8 +147,6 @@ $(document).ready(function() {
       }
     }
   }
-
-  // call checkCounter on every page
   checkCounter();
 
   $('.delete').click(function() {
@@ -135,6 +154,8 @@ $(document).ready(function() {
     localStorage.removeItem('saved_counter');
   });
 
+
+  // REGISTRATION =============================================================
 
   $('#register #register-button').click(function() {
     $('#register .container').addClass('blur');
@@ -149,6 +170,7 @@ $(document).ready(function() {
   });
 
 
+  // APPT CALENDAR ===========================================================
 
   $('#calendar').fullCalendar({
     weekends: false,
@@ -181,6 +203,13 @@ $(document).ready(function() {
     },
     {
       title  : 'Student Appointments: Aileen Yates',
+      start  : '2017-04-05T08:00:00',
+      end    : '2017-04-05T11:00:00',
+      url    : '#',
+      className: 'aileen'
+    },
+    {
+      title  : 'Student Appointments: Aileen Yates',
       start  : '2017-04-07T13:00:00',
       end    : '2017-04-07T15:00:00',
       url    : '#',
@@ -189,7 +218,12 @@ $(document).ready(function() {
     ]
   });
 
+  $('.fc-event').click(function() {
+    console.log('event clicked');
+  });
+
   $('.fc-event.aileen').click(function() {
+    console.log('aileen');
     $('.modal.appt').addClass('aileen-modal').removeClass('prajna-modal').fadeIn();
   });
 
