@@ -12,9 +12,11 @@ $( document ).ready( function() {
     const val1 = $('#login .username').val() !== '';
     const val2 = $('#login .password').val() !== '';
     if (val1 && val2) {
+      console.log('here');
       if (window.location.href.indexOf("localhost") > -1) {
         $(this).attr("href", "/dashboard");
       } else {
+        console.log('use absolute url');
         $(this).attr("href", "http://brittanychiang.com/Redesign-myNEU/dashboard");
       }
     }
