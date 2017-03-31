@@ -11,7 +11,7 @@ module.exports = gulp => {
 
   // run `jekyll build`
   gulp.task( 'jekyll-build', done => {
-    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+    return cp.spawn( jekyll , ['build', '--config', '_config.yml,_config_dev.yml'], {stdio: 'inherit'})
     .on('close', done);
   });
 
