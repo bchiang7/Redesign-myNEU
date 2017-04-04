@@ -269,9 +269,9 @@ select {
   margin: 0 auto;
   width: 500px;
   height: 500px;
-  position: absolute;
-  top: 20px;
-  left: 0;
+  position: fixed;
+  top: 90px;
+  left: 90px;
   right: 0;
   border: 1px solid #DFE3E9;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
